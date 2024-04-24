@@ -44,8 +44,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Gai Ashkenazy Online Resume',
+  description: "Gai Ashkenazy Online Resume - Open to job offers",
 };
 
 /**
@@ -69,18 +69,18 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Gai Ashkenazy.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a Tel Aviv based <strong className="text-stone-100">Backend Software Engineer</strong>, currently working
+        at <strong className="text-stone-100">Via Transportation</strong> helping build a modern, huge scale,
+        intelligent and data driven product.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
+        In my free time time, you can catch me training in <strong className="text-stone-100">soccer</strong>,
         plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        <strong className="text-stone-100">Tel Aviv beach</strong>.
       </p>
     </>
   ),
