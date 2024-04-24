@@ -1,7 +1,7 @@
-# React JS Online Resume Website
+# Gai Ashkenazy React JS Online Resume Website
 
 An online resume of Gai Ashkenazy - Open for work!
-This online resume is hosted with Github pages.
+This online resume is hosted with GitHub pages.
 See the resume in the [link](https://gaiashk.github.io/gai-ashkenazy-online-resume/)
 
 ## Thanks
