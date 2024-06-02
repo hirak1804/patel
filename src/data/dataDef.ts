@@ -39,8 +39,12 @@ interface HeroActionItem {
  */
 export interface About {
   profileImageSrc?: string;
-  description: string;
+  description: AboutDescription[];
   aboutItems: AboutItem[];
+}
+
+export interface AboutDescription {
+  text: string
 }
 
 export interface AboutItem {
@@ -121,10 +125,7 @@ export const ContactType = {
   Phone: 'Phone',
   Location: 'Location',
   Github: 'Github',
-  LinkedIn: 'LinkedIn',
-  Facebook: 'Facebook',
-  Twitter: 'Twitter',
-  Instagram: 'Instagram',
+  LinkedIn: 'LinkedIn'
 } as const;
 
 export type ContactType = (typeof ContactType)[keyof typeof ContactType];

@@ -1,36 +1,23 @@
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
-  BuildingOffice2Icon,
-  CalendarIcon,
   FlagIcon,
   MapIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
   ContactSection,
-  ContactType,
   Hero,
   HomepageMeta,
   PortfolioItem,
@@ -44,8 +31,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Asiel Montes Portfolio',
+  description: "A portfolio website for Asiel Montes, full stack software developer in Tampa",
 };
 
 /**
@@ -69,18 +56,16 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Asiel Montes.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a Florida based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
+        on <strong className="text-stone-100"><a href="https://codemento.com" rel="author" target="_blank">Codemento.com</a></strong> to help software developers find, save and share solutions to code problems.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        I also offer <strong className="text-stone-100">custom website development</strong> for individuals and businesses,
+        because I believe everyone can benefit from a professional online presence that highlights <strong className="text-stone-100">what you have to offer</strong> to the world. If that sounds like something worth exploring, feel free to <strong className="text-stone-100">contact me</strong> below.
       </p>
     </>
   ),
@@ -104,16 +89,19 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: [
+    {
+      text: `I first fell in love with computer programming in 2017 after discovering Ruby and realizing I could 'talk to the machine' with written code. Through a combination of self-study and a coding bootcamp, I became a professional developer in 2019, and I continue to program to this day.`
+    },
+    {
+      text: `In terms of front-end development, my areas of expertise include using technologies like React, Angular and Typescript to create optimized, professional-looking websites and applications. On the back-end, I have experience building RESTful API's using server side frameworks like .NET and Node.js, as well as using cloud services like Firebase.`
+    }
+  ],
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Tampa, FL', Icon: MapIcon},
+    {label: 'Nationality', text: 'Cuban / American', Icon: FlagIcon},
+    {label: 'Interests', text: 'Artificial Intelligence, Cryptocurrency, Science Fiction, Anime, Travel', Icon: SparklesIcon},
+    {label: 'Study', text: 'Universidad de La Habana', Icon: AcademicCapIcon}
   ],
 };
 
@@ -125,16 +113,16 @@ export const skills: SkillGroup[] = [
     name: 'Spoken languages',
     skills: [
       {
-        name: 'English',
+        name: 'Spanish',
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: 'English',
+        level: 9,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: 'French',
+        level: 6,
       },
     ],
   },
@@ -143,15 +131,23 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React',
-        level: 9,
+        level: 8,
       },
       {
         name: 'Typescript',
+        level: 6,
+      },
+      {
+        name: 'Angular',
         level: 7,
       },
       {
-        name: 'GraphQL',
+        name: 'Angular Material',
         level: 6,
+      },
+      {
+        name: 'BlueprintJS',
+        level: 5,
       },
     ],
   },
@@ -159,34 +155,34 @@ export const skills: SkillGroup[] = [
     name: 'Backend development',
     skills: [
       {
-        name: 'Node.js',
-        level: 8,
+        name: '.NET',
+        level: 7,
       },
       {
-        name: 'Rust',
+        name: 'Node.js',
         level: 5,
       },
       {
-        name: 'Golang',
-        level: 4,
+        name: 'MySQL',
+        level: 2,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Other',
     skills: [
       {
-        name: 'React Native',
-        level: 9,
+        name: 'Firebase',
+        level: 7,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'Git',
+        level: 8,
       },
       {
-        name: 'Swift',
+        name: 'Docker',
         level: 3,
-      },
+      }
     ],
   },
 ];
@@ -196,112 +192,96 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Codemento',
+    description: 'The best way to find, save and share code solutions. Built using React, Typescript and BlueprintJS on the front-end, with an Express.js back-end created on top of Firebase Functions. API integrations provide Web Search and AI chat capabilities.',
+    url: 'https://codemento.com',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Ace Medical & Rehab',
+    description: 'Booking website for Ace Medical & Rehab Clinic. Uses React and PrimeReact for a responsive and intuitive UI. Includes API integrations with YouCanBook.me and EmailJS for online reservations and email communications. Hosted on Firebase.',
+    url: 'https://acemedicalrehab.com',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Crown Clothing',
+    description: 'A sample e-commerce store. Uses React and Redux for UI and state management. Connects to Firestore Database for storage, and uses Stripe Checkout for mock-up payment functionality. Deployed on Vercel.',
+    url: 'https://crwn-clothing-silk.vercel.app',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Mole',
+    description: 'A simple whack-a-mole game. Nothing but React and CSS. Hosted on Firebase.',
+    url: 'https://hakxel-mole.firebaseapp.com',
     image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
+  }
 ];
 
 /**
- * Resume section -- TODO: Standardize resume contact format or offer MDX
+ * Resume section
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'February 2019',
+    location: 'Wyncode Academy',
+    title: 'Full Stack Web Developer',
+    content: <p>Main Subjects: HTML, CSS, Javascript, Express.js, Ruby, Ruby on Rails.</p>
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'July 2014',
+    location: 'Universidad de La Habana',
+    title: 'B.A. in French Language',
+    content: <p>Mains Subjects: French Translation and Interpretation, Linguistics, History and Literature.</p>
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'June 2021 - February 2024',
+    location: 'CentralSquare Technologies',
+    title: 'Software Developer II',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <ul className='list-disc pl-5 space-y-2'>
+        <li>
+          <strong>Introduced and enhanced multiple features</strong> through database schema modifications, business logic
+          updates, UI modifications, etc., improving user experience by streamlining financial transactions while
+          maintaining data integrity and reliability for a cash receipts processing solution.
+        </li>
+        <li>
+          <strong>Improved system access management and security</strong> by integrating in-house identity providers with
+          Azure Active Directory.
+        </li>
+        <li>
+          <strong>Maintained and upgraded internal libraries</strong>, ensuring compatibility and
+          performance improvements across all library packages.
+        </li>
+        <li>
+          <strong>Led the design and implementation of automated UI testing</strong>, improving software reliability by
+          reducing the need for manual quality assurance processes.
+        </li>
+      </ul>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'July 2019 - June 2021',
+    location: 'CentralSquare Technologies',
+    title: 'Software Developer',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <ul className='list-disc pl-5 space-y-2'>
+        <li>
+          <strong>Pioneered the front-end development of a user records maintenance project</strong> using Angular and
+            Material UI, significantly improving data management capabilities for users.
+        </li>
+        <li>
+          <strong>Introduced state management in Angular projects</strong> by implementing the NGXS library, leading to
+            more efficient and manageable state handling, enhancing application stability and developer
+            productivity.
+        </li>
+        <li>
+          <strong>Orchestrated and maintained Azure build and release pipelines</strong> for development and QA
+            environments, optimizing the CI/CD process and ensuring timely and secure software deployments.
+        </li>
+      </ul>
     ),
   },
 ];
@@ -311,23 +291,7 @@ export const experience: TimelineItem[] = [
  */
 export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
-  testimonials: [
-    {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
-  ],
+  testimonials: []
 };
 
 /**
@@ -336,38 +300,14 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
-  items: [
-    {
-      type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
-    },
-    {
-      type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
-    },
-    {
-      type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
-    },
-  ],
+  description: "Want to work with me? Send me a quick note with your details and the type of work you have in mind and I'll be happy to contact you.",
+  items: [],
 };
 
 /**
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/hakxel'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/asiel-montes/'}
 ];
