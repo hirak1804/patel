@@ -44,7 +44,7 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'Ben Stef Resume',
+  title: 'Ben Stef',
   description: "Example site built with Tim Baker's react resume template",
 };
 
@@ -73,14 +73,12 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I am a Technology Evangelist & Systems Engineer with extensive Technical Support knowledge & experience. In other words…I am what some people may call a "Jack-of-all trades" technologist!
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time time, you can catch me enjoyiing time exploring <strong className="text-stone-100">NYC</strong> and all that it offers ,
+        plucking my <strong className="text-stone-100">banjo</strong>, or traveling the {' '}
+        <strong className="text-stone-100">world</strong>  with my wife!
       </p>
     </>
   ),
